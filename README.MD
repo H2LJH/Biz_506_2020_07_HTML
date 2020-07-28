@@ -27,6 +27,25 @@
 
 * http://naver.com/  라고 Browser 주소창에 입력을 하면 htttp://www.naver.com/index.html 이라고 입력한 것과 같다.
 
+
+#### HTML의 box Model
+
+* HTML의 Tag를 Box Model로 분류하면 block, Inline으로 분류할수 있다.
+
+* Block : content의 길이에 관계없이 화면의 왼쪽끝에서 오른쪽 끝까지를 역역으로 사용하는 tag
+
+* Inline : 여러가지 tag로 묶인 Content가 가로 바얗ㅇ으로 나열되어 표현될수 있다.
+		   Inline tag는 문자열 중간에 있는 단어들의 모양, 색깔등을 바꾸는 용도부터 다양한 용도로 사용이 된다.
+
+
+#### HTML의 Selector
+
+* tag : HTML에서 사용하는 모든 tag를 Selector Tag라고 한다.
+
+* 선택자(Selector) : HTML문서내에서는 tag라고 불리우는 요소들이 style과 관련된 부분이 적용되면 tag selector라고 부른다.
+
+* CSS(Cascading Style Sheet)를 사용하여 html문서에 디자인적인 기능을 추가한다.
+
 ####  HTTP : Hyper Text Transfer Protocol
 
 * HTML (Hyper Text Markup Lang.)로 만든 문서파일(정보)을 인터넷을 통해서 주고 받을때 사용하는 보편적인 프로토콜

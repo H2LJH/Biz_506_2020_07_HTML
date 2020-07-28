@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*
+            style 지정할때 사용하는 단위
+            px, pt, dp, em, rem 등등..
+            rem(em) : box내부에 문자열 content 있을때 
+                      content 문자열중에 가장 큰 문자열을 기준으로
+                      배율을 지정
+        */
+        
+        a { color: white; text-decoration: none; }
+
+        ul { margin-top : 0; }
+
+        li:hover { background-color: teal; color: white; }
+
+        #nav { background-color: blue; }
+        
+        #header
+        {
+            background-color: green;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        li
+        {
+            display: inline-block;
+            padding: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h3>나의 홈페이지</h3>
+        <p>나의 홈페이지에 오신것을 환영합니다</p>
+    </div>
+
+    <div id = "nav">
+        <ul>
+            <li>Home</li>
+
+            <li><a href="https://www.naver.com" target="_new">네이버</a></li>
+
+            <li><a href="https://www.daum.net" target="_new">다음</a></li>
+
+            <li><a href="https://www.google.com" target="_new">구글</a></li>
+
+            <li><a href="https://www.callor.com" target="_new">선생님</a></li>
+        </ul>
+    </div>    
+</body>
+</html>
