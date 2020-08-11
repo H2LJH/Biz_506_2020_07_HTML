@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>얼렁뚱땅 블로그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        header{
+            text-align: center;
+            padding: 1.5rem;
+            
+            background-image: url("images/snowmauntin.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            background-size: 100% 100%;
+            color: ivory;
+        }
+        
+        #button{
+            text-align: right;
+        }
+        /* id 값이 button 으로 설정된 box에 소속되어 있는 button tag에만 style을 지정하자 */
+        #button button{
+            background-color: #2196F3;
+            color: white;
+            padding: 1rem; /* padding, margin에서 많이 사용하는 단위 (내부의 text크기를 1로 하여 비례적으로 적용하는 값) */
+            border: none;
+            padding: 8px 16px; /* button의 경우 desing guide에서 제정한 값으로 Top,Bottom : 8px, Left,Right : 16px */
+            vertical-align: middle;
+            cursor: pointer;
+            
+            /*
+                hover에서 밑줄 효과를 주고자 할때 화면이 흔들리는 현상을 막기 위해서
+                기본 테부리의 bottom을 투명색으로 같은 두께만큼 지정을 해준다.
+            */
+            border-bottom: 2px solid transparent; /* transparent : 투명색 */
+            transition: all 0.5s linear;
+        }
+
+        #button button:hover
+        {
+            background-color: honeydew;
+            color: black;
+            border-bottom: 2px solid green;
+        }
+        /*
+            margin, padding의 값 지정
+            4개 : Top부터 시계방향으로 1개씩 지정
+            2개 : Top,bottom 그리고 Left,Right;
+        */
+        #blog_body{
+            width: 80%;
+            /* 
+                blog_body box의 top,Bottom 여백을 10px로 하고 Left,Right 여백은 바깥쪽 box 크기를 계산하여 같은 값으로 자동 조절하라는 의미 
+                blog_body를 좌우 중앙에 정렬하는 용도로 많이 쓰인다. 
+            */
+            margin: 10px auto; 
+            background-image: url("images/img_001.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #blog_body:hover{
+            background-image: url("images/img_002.jpg");
+        }
+
+        .blog_title{
+            background-color: teal;
+            padding: 8px;
+            color: white;
+        }
+        
+        .blog_title:hover{
+            color: navy;
+            cursor: pointer;
+        }
+
+        .blog_text{
+            padding: 8px;
+        }
+
+        footer{
+            background-color: navy;
+            color: greenyellow;
+            text-align: center;
+            padding: 8px;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h3>얼렁뚱땅 블로그V1</h3>
+        <p>나의 얼렁뚱땅 블로그에 방문해 주신것을 환영합니다.</p>
+    </header>
+
+    <section id = "main">
+        <article id="button">
+            <button>블로그 작성</button>
+        </article>
+
+        <article id = "test">
+            <button>나는 테스트</button>
+        </article>
+
+        <article id ="blog_body">
+            <section class ="blog_title">
+                <h4>오늘은 블로그 시작하는날</h4>
+            </section>
+
+            <section class = "blog_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptas animi minima explicabo. Deserunt rem quos ea amet commodi, eos velit dolores aut esse perspiciatis dicta ipsa quibusdam repudiandae error.</p>
+            </section>
+        </article>
+    </section>
+
+
+
+        <section>
+            <footer>
+                <address>CopyRight &copy; H2LJH@naver.com</address>
+            </footer>
+        </section>
+</body>
+</html>
