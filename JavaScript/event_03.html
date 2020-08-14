@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <form action="writer">
+        <input type = "text"     placeholder="이름 입력"></br>
+        <input type = "text"     placeholder="아이디 입력"></br>
+        <input type = "password" placeholder="비밀번호 입력"></br>
+        <input type = "date">
+        <input type = "datetime-local">
+        <input type = "number">
+        <input type = "email">
+        <input type = "phone">
+        <button type = "button" onclick="save()">저장</button>
+    </form>
+
+    <script>
+        function save()
+        {
+            var name = document.getElementsByTagName("input")[0].value;
+            var userID = document.getElementsByTagName("input")[1].value;
+            var userPWD = document.getElementsByTagName("input")[2].value;
+
+            if(name == "")
+            {
+                alert("이름은 반드시 입력해야 합니다.");
+                document.getElementsByTagName("input")[0].focus();
+                return false;
+            }
+
+            if(userID.length < 5)
+            {
+                alert("사용자 ID는 5글자 이상입니다.")
+                document.getElementsByTagName("input")[1].focus();
+                return false;
+            }
+
+            if(userPWD.length < 5)
+            {
+                alert("비밀번호는 5글자 이상입니다.")
+                document.getElementsByTagName("input")[2].focus();
+                return false;
+            }
+
+            alert("저장하로 갑니다.");
+            document.getElementsByTagName('form')[0].submit();
+        }
+    </script>
+</body>
+</html>

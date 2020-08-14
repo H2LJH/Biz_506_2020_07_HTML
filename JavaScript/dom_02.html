@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> div{ border: 1px solid blue; margin: 10px; height: 50px; } </style>
+</head>
+<body>
+    <div>div 1</div>
+    <div>div 2</div>
+    <div>div 3</div>
+    <div>div 3</div>
+    <div>div 3</div>
+    <script>
+        // getElmentsByTagName() method tag의 list를 추출하여 배열로 만들어 준다.
+        var div_list = document.getElementsByTagName('div');
+        div_list[0].innerHTML = "나는 1 번 div";
+        div_list[1].innerHTML = "Korea";
+        div_list[2].innerHTML = "대한민국";
+
+        for(var i = 0; i <div_list.length; ++i)
+            div_list[i].innerHTML = i * 100;
+
+        for(var i = 0; i <div_list.length; ++i)
+        {
+            var rnd = Math.random();     // 0~1미만의 난수를 생성
+            rnd = Math.floor(rnd * 100); // Math.floor() : 소수점이하 값을 잘라라
+            div_list[i].innerHTML = rnd;
+        }
+
+        for(var i = 0; i <div_list.length; ++i)
+        {
+            var red   = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue  = Math.floor(Math.random() * 256);
+
+            //red = toHex(red);
+            //green = toHex(green);
+            //blue = toHex(blue);
+            var color_string = `rgb(${red}, ${green}, ${blue})`;
+            div_list[i].style.backgroundColor = color_string;
+            div_list[i].innerHTML = color_string;
+        }
+    </script>
+</body>
+</html>
