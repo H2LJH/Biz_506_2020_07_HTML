@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function()
+        {
+            $("div").text("Korea")
+            $("div").css("height", "30px")
+            $("div").css("margin", "10px")
+
+            // toggle : 클릭할때마다 상태가 반전이 반복되는 코드
+            var sw = -1
+            $("div").click(function()
+            {
+                if(sw > 0)
+                {
+                    $(this).removeClass("divs_blue")
+                    $(this).addClass("divs_red")                    
+                }
+                
+                else
+                {
+                    $(this).removeClass("divs_red") // 클래스 삭제
+                    $(this).addClass("divs_blue") // 클래스 추가
+                }
+                sw *= -1
+            })
+        })
+    </script>
+    <style>
+        .divs_red
+        {
+            background-color: red;
+            color: white;
+        }
+        .divs_blue
+        {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+    <script></script>
+</head>
+<body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</body>
+</html>
