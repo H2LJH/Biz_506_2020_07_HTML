@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://kit.fontawesome.com/c1d8b25418.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            background-color: #00316b;
+            color: white;
+        }
+        ul{
+            width: 80%;
+            margin: 0 auto;
+            /* display: flex; */
+        }
+
+        ul li{
+            list-style-type: none;
+            padding: 20px;
+            color: white;
+            display: inline-block;
+        }
+
+        ul li:hover{
+            background-color: white;
+            color: blue;
+        }
+
+
+        div.toggle{
+            width: 100%;
+            padding: 10px 20px;
+            text-align: right;
+            color: white;
+            font-size: 20px;
+            display: none; /* 기본화면(PC용 view port)에서는 현재 toggle div box를 감추어라 */
+        }
+
+
+        /* view port 화면의 width가 768px 보다 작아지면 적용할 CSS */
+        @media (max-width:768px)
+        {
+            /* 768px 보다 작아지면 toggle div box를 보여달라 */
+            div.toggle 
+            {
+                display: block;    
+            }
+            
+            ul 
+            {
+                width: 100%;
+                display: none;
+            }
+            
+            ul li
+            {
+                display: block;
+                text-align: center;
+                color: blue;
+             
+            }
+
+            ul li:hover{
+                background-color: gray;
+            }
+            
+            .active
+            {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        $(function()
+        { /* 
+            햄버거(샌드위치) 버튼을
+            ul tag에 active 클래스를 적용, 비적용하여 보이게, 보이지 않게 처리하는 코드
+          */
+            $(".menu").click(function()
+            {
+                $("ul").toggleClass("active")
+            })
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <div class = "toggle">
+            <i class ="fas fa-bars menu"></i>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>상품관리</li>
+            <li>거래처관리</li>
+            <li>로그인</li>
+            <li>회원가입</li>
+        </ul>
+    </nav>
+</body>
+</html>
